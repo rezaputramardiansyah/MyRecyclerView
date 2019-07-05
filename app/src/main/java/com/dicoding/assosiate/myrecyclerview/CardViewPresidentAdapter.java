@@ -41,7 +41,7 @@ public class CardViewPresidentAdapter extends RecyclerView.Adapter<CardViewPresi
     public void onBindViewHolder(CardViewViewHolder holder, int position){
         President p = getListPresident().get(position);
 
-        Glide.with(context).load(p.getPhoto()).override(350,550).into(holder.imgPhoto);
+        Glide.with(context).load(p.getPhoto()).into(holder.imgPhoto);
 
         holder.tvName.setText(p.getName());
         holder.tvRemarks.setText(p.getRemarks());

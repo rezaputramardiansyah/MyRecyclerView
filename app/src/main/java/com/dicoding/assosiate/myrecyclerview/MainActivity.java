@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvCategory = (RecyclerView)findViewById(R.id.rv_category);
+        rvCategory = findViewById(R.id.rv_category);
         rvCategory.setHasFixedSize(true);
 
         list = new ArrayList<>();
@@ -70,16 +70,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_list:
                 showRecyclerList();
                 title = "Mode List";
+                setActionBarTitle(title);
                 break;
 
             case R.id.action_grid:
                 showRecyclerGrid();
                 title = "Mode Grid";
+                setActionBarTitle(title);
                 break;
 
             case R.id.action_cardview:
                 showRecyclerCardView();
                 title = "Mode CardView";
+                setActionBarTitle(title);
                 break;
         }
         return super.onOptionsItemSelected(item);
